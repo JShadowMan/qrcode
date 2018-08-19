@@ -1,0 +1,15 @@
+#ifndef __QR_CODE_CONFIG_INCLUDED__
+#define __QR_CODE_CONFIG_INCLUDED__
+
+
+#define APPLICATION_NAME        "@APPLICATION_NAME@"
+#define APPLICATION_VERSION     "@QRCODE_VERSION@"
+
+#cmakedefine __type_debug__
+#cmakedefine __type_release__
+
+#cmakedefine __platform_linux__
+#cmakedefine __platform_windows__
+
+
+#endif // __QR_CODE_CONFIG_INCLUDED__
