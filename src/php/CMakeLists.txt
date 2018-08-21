@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 
 # -- qrcode-client detail
-set(QRCODE_TARGET_NAME qc-php)
+set(QRCODE_TARGET_NAME qr-php)
 
 # -- client sources
 aux_source_directory(${QRCODE_SOURCES}/php QRCODE_TARGET_SOURCES)

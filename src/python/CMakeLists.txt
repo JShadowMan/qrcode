@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 
 # -- qrcode-client detail
-set(QRCODE_TARGET_NAME qc-python)
+set(QRCODE_TARGET_NAME qr-python)
 
 # -- client sources
 aux_source_directory(${QRCODE_SOURCES}/python QRCODE_TARGET_SOURCES)

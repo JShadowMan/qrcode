@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "qrcode/qrcode.h"
+#include "qrcode/qr.h"
 
 
 int main(int argc, char *argv[]) {

@@ -65,7 +65,7 @@ set(QRCODE_SOURCES "${CMAKE_SOURCE_DIR}/src")
 set(QRCODE_CONFIG_INCLUDE  "${CMAKE_BINARY_DIR}/include")
 configure_file(
     "${QRCODE_INCLUDE}/config.h.in"
-    "${QRCODE_CONFIG_INCLUDE}/qc_config.h"
+    "${QRCODE_CONFIG_INCLUDE}/qr_config.h"
 )
 
 # -- set include directories
