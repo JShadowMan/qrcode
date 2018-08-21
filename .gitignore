@@ -56,3 +56,7 @@ dkms.conf
 
 # CMake files
 cmake-*
+
+# Build
+build
+dist

@@ -27,6 +27,6 @@ QrCode qr_create_empty() {
 }
 
 void qr_destroy(QrCode *qr) {
-    free(qr);
+    free(*qr);
     *qr = NULL;
 }
