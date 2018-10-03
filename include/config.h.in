@@ -5,8 +5,8 @@
 #define APPLICATION_NAME        "@APPLICATION_NAME@"
 #define APPLICATION_VERSION     "@QRCODE_VERSION@"
 
-#cmakedefine __type_debug__
-#cmakedefine __type_release__
+#cmakedefine __build_type_debug__
+#cmakedefine __build_type_release__
 
 #cmakedefine __platform_linux__
 #cmakedefine __platform_windows__

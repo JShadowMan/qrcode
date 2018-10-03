@@ -44,9 +44,9 @@ set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_STATIC_LINKER_FLAGS_DEBUG} -fno-omit-frame
 # -- build type
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 if(CMAKE_BUILD_TYPE MATCHES "Debug")
-    set(__type_debug__ YES)
+    set(__build_type_debug__ YES)
 else()
-    set(__type_release__ YES)
+    set(__build_type_release__ YES)
 endif()
 
 # -- platform
@@ -75,7 +75,10 @@ include_directories(${QRCODE_INCLUDE} ${QRCODE_CONFIG_INCLUDE})
 file(GLOB_RECURSE QRCODE_LIBRARIES_SOURCES "${QRCODE_SOURCES}/lib/*.c")
 #aux_source_directory(${QRCODE_SOURCES}/lib SHADOWSOCKS_LIBRARIES_SOURCES)
 
+# -- library target
+#add_library(${APPLICATION_NAME} ${QRCODE_SOURCES}/lib)
+
 # -- binaries target
 add_subdirectory(${QRCODE_SOURCES}/shell)
-add_subdirectory(${QRCODE_SOURCES}/python)
-add_subdirectory(${QRCODE_SOURCES}/php)
+#add_subdirectory(${QRCODE_SOURCES}/python)
+#dd_subdirectory(${QRCODE_SOURCES}/php)
