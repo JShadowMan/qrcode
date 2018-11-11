@@ -15,18 +15,18 @@ enum qr_error_detection_level_t {
 typedef enum qr_error_detection_level_t QrCodeErrorDetectionLevel;
 
 
-// qr data
+// qrcode type definition
 struct qr_t;
 typedef struct qr_t *QrCode;
 
 
-QrCode qr_create_from_string(const char *body);
-QrCode qr_create_from_empty();
+QrCode qrCreateFromEmpty();
+QrCode qrCreateFromString(const char *body);
 
-void qr_set_body(QrCode qr, const char *body);
-void qr_set_error_detection_level(QrCode qr, QrCodeErrorDetectionLevel level);
+void qrSetBody(QrCode qr, const char *body);
+void qrSetErrorDetectionLevel(QrCode qr, QrCodeErrorDetectionLevel level);
 
-void qr_destroy(QrCode *qr);
+void qrDestroy(QrCode *qr);
 
 
 #endif // __QR_CODE_INCLUDED__

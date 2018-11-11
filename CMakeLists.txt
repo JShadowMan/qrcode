@@ -25,17 +25,17 @@ include(cmake/BuildVariables.cmake)
 include(cmake/FeatureCheck.cmake)
 
 # -- set default build type
-if(NOT CMAKE_BUILD_TYPE)
+if (NOT CMAKE_BUILD_TYPE)
     message(STATUS "Build type not set - defaulting to Release")
     set(CMAKE_BUILD_TYPE "Release" CACHE
         STRING "Choose the type of build from: Debug Release RelWithDebInfo MinSizeRel Coverage."
         FORCE)
-endif()
+endif ()
 
 # -- compiler flags
-if(CMAKE_C_COMPILER_ID MATCHES "GNU")
+if (CMAKE_C_COMPILER_ID MATCHES "GNU")
     set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -Wall")
-endif()
+endif ()
 
 set(CMAKE_C_FLAGS_DEBUG "$ENV{CFLAGS} -O0 -g -ggdb")
 set(CMAKE_C_FLAGS_RELEASE "$ENV{CFLAGS} -O3")
@@ -43,19 +43,19 @@ set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_STATIC_LINKER_FLAGS_DEBUG} -fno-omit-frame
 
 # -- build type
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
-if(CMAKE_BUILD_TYPE MATCHES "Debug")
+if (CMAKE_BUILD_TYPE MATCHES "Debug")
     set(__build_type_debug__ YES)
-else()
+else ()
     set(__build_type_release__ YES)
-endif()
+endif ()
 
 # -- platform
 message(STATUS "Current Platform: ${CMAKE_SYSTEM}")
-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+if (CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(__platform_linux__ YES)
-elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
+elseif (CMAKE_SYSTEM_NAME MATCHES "Windows")
     set(__platform_windows__ YES)
-endif()
+endif ()
 
 # -- include/source root
 set(QRCODE_INCLUDE "${CMAKE_SOURCE_DIR}/include")
