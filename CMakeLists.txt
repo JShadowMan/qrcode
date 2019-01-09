@@ -1,11 +1,14 @@
 #-- set the minimum required version of cmake
 cmake_minimum_required(VERSION 3.8)
 
-#-- Sets project details
-project(QRCODE LANGUAGES C VERSION 0.0.1)
+#-- Include cmake modules
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-#-- Set compiler features
-set(CMAKE_C_STANDARD 99)
+#-- Sets project details
+project(qrcode LANGUAGES C VERSION 0.0.1)
+
+#-- Compiler settings and options
+include(cmake/CompilerOptions.cmake)
 
 #-- Sets where to put all the [ARCHIVE/LIBRARY/RUNTIME] target files when built
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
