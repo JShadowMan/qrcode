@@ -36,3 +36,16 @@ void destroyQrcode(Qrcode *qrcode) {
     free(*qrcode);
     *qrcode = NULL;
 }
+
+//
+// Encodable character set
+//
+// 1. Numeric (digits only)
+//      0 1 2 3 4 5 6 7 8 9
+// 2. Alphanumeric (digits, UPPER case letters, nine other characters)
+//      0 1 2 3 4 5 6 7 8
+//      A B C D E F G H I J I K L M N O P Q R S T U V W X Y Z
+//      $ % * + - . / : [SPACE]
+// 3. Byte (Octet mode)
+// 4. Kanji character (can be compacted into 13bits)
+//
