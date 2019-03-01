@@ -65,7 +65,7 @@ configure_file(
 include_directories(${QRCODE_CONFIGURE_HEADERS} ${QRCODE_LIBRARY_HEADERS})
 
 #-- Generate a list of source files
-file(GLOB_RECURSE QRCODE_LIBRARY_SOURCES "${QRCODE_LIBRARY_SOURCES}/*.c")
+file(GLOB_RECURSE QRCODE_LIBRARY_SOURCE_CODES "${QRCODE_LIBRARY_SOURCES}/*.c")
 
 #-- Add a library target
-add_library(qrcode "${QRCODE_LIBRARY_SOURCES}")
+add_library(qrcode "${QRCODE_LIBRARY_SOURCE_CODES}")
