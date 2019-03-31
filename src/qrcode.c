@@ -10,8 +10,11 @@
 //
 struct qrcode_t {
 
+    // value of is micro symbol
+    uint8_t micro           : 1;
+
     // version value from 1 to 40
-    uint8_t version;
+    uint8_t version         : 6;
 
 };
 
@@ -37,6 +40,7 @@ void destroyQrcode(Qrcode *qrcode) {
     *qrcode = NULL;
 }
 
+
 //
 // Encodable character set
 //
@@ -48,4 +52,13 @@ void destroyQrcode(Qrcode *qrcode) {
 //      $ % * + - . / : [SPACE]
 // 3. Byte (Octet mode)
 // 4. Kanji character (can be compacted into 13bits)
+//
+
+
+//
+// Timing pattern
+//
+// The horizontal and vertical timing patterns respectively consist of
+// a one row or column of alternating dark and light modules, commencing
+// and ending with a dark module.
 //
